@@ -37,22 +37,16 @@ def get_problem():
   """Specifies a problem to run TF-Coder on. Edit this function!"""
   # A dict mapping input variable names to input tensors.
   inputs = {
-      'rows': [10, 20, 30],
-      'cols': [1, 2, 3, 4],
+      'rows': [1.0, 2.0, 3.0],
   }
-
-  # The single desired output tensor.
-  output = [[11, 12, 13, 14],
-            [21, 22, 23, 24],
-            [31, 32, 33, 34]]
-
-  # A list of relevant scalar constants (if any).
-  constants = []
-
+  # The corresponding output tensor.
+  output = [[  0.  ,    100.0,200.0   ]]
+  # A list of relevant scalar constants, if any.
+  constants = [100.0, -1.0]
   # An English description of the tensor manipulation.
-  description = 'add two vectors with broadcasting to get a matrix'
-
+  description = 'subtract one and multiply by one hundred'
   return inputs, output, constants, description
+
 
 
 def get_settings():
